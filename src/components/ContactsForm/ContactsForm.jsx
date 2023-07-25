@@ -1,9 +1,9 @@
 import { Form, Label } from './ContactsForm.styled';
 import { Field, ErrorMessage, Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { validationSchema } from 'components/helpers/validationSchema';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { validationSchema } from 'helpers/validationSchema';
+import { addContact } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 
 export const ContactsForm = () => {
   const contacts = useSelector(selectContacts);
