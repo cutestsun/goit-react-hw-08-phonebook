@@ -73,6 +73,6 @@ export const StyledErrorMessage = styled.p`
   left: 20px;
   color: #b40101;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.22;
 `;
