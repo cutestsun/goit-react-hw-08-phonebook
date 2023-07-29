@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Item } from './ContactsListItem.styled';
+import { Button, Item, Name, Number } from './ContactsListItem.styled';
 import { deleteContact } from 'redux/contacts/operations';
 import { selectIsLoading } from 'redux/contacts/selectors';
-import { Loader } from 'components/Loader/Loader';
+import { DeleteBtnLoader } from 'components/Loader/Loader';
 import { useState } from 'react';
+import { IoTrashOutline } from 'react-icons/io5';
 
 export const ContactsListItem = ({ id, name, number }) => {
   const dispatch = useDispatch();
@@ -12,7 +13,8 @@ export const ContactsListItem = ({ id, name, number }) => {
 
   return (
     <Item>
-      {name}: {number}
+      <Name>{name}</Name>
+      <Number>{number}</Number>
       <Button
         onClick={() => {
           setDeletingContactId(id);
@@ -20,8 +22,8 @@ export const ContactsListItem = ({ id, name, number }) => {
         }}
         // disabled={isLoading}
       >
-        Delete
-        {deletingContactId === id && isLoading && <Loader size={12} />}
+        {!isLoading && <IoTrashOutline size={20} color="currentColor" />}
+        {deletingContactId === id && isLoading && <DeleteBtnLoader size={20} />}
       </Button>
     </Item>
   );

@@ -1,10 +1,15 @@
-import { Container } from 'components/Container/Container.styled';
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
+import { Section } from 'components/Styled/Section.styled';
+import { LoginBgWrapper } from 'components/Styled/BgWrapper.styled';
 
 export default function Register() {
   return (
-    <Container>
-      <RegisterForm />
-    </Container>
+    <main>
+      <Section>
+        <LoginBgWrapper />
+
+        <RegisterForm />
+      </Section>
+    </main>
   );
 }

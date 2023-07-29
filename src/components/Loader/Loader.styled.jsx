@@ -5,6 +5,12 @@ export const LoaderWrapper = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(50%, 50%); */
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+`;
+
+export const BtnLoaderWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;

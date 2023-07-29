@@ -1,13 +1,14 @@
+import { StyledNavLink } from 'components/Styled/StyledNavLink';
 import { useAuth } from 'redux/hooks/useAuth';
-import { StyledNavLink } from './Navigation.styled';
+import { Nav } from './Navigation.styled';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <nav>
+    <Nav>
       <StyledNavLink to="/">Home</StyledNavLink>
       {isLoggedIn && <StyledNavLink to="/contacts">Contacts</StyledNavLink>}
-    </nav>
+    </Nav>
   );
 };

@@ -1,11 +1,19 @@
-import { Form, Label } from './ContactsForm.styled';
-import { Field, ErrorMessage, Formik } from 'formik';
+import {
+  AllInputsWrapper,
+  Button,
+  Field,
+  Form,
+  InputWrapper,
+  Label,
+  StyledErrorMessage,
+} from './ContactsForm.styled';
+import { ErrorMessage, Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import { validationSchema } from 'helpers/validationSchema';
 import { addContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selectors';
 
-export const ContactsForm = () => {
+export const ContactsForm = ({ closeModal }) => {
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
@@ -19,6 +27,7 @@ export const ContactsForm = () => {
     }
 
     dispatch(addContact(values));
+    closeModal();
 
     action.resetForm();
   };
@@ -30,28 +39,30 @@ export const ContactsForm = () => {
       onSubmit={onSubmit}
     >
       <Form>
-        <Label>
-          Name
-          <Field
-            type="text"
-            name="name"
-            // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          />
-          <ErrorMessage name="name" render={message => <p>{message}</p>} />
-        </Label>
-        <Label>
-          Number
-          <Field
-            type="tel"
-            name="number"
-            // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          />
-          <ErrorMessage name="number" render={message => <p>{message}</p>} />
-        </Label>
+        <AllInputsWrapper>
+          <InputWrapper>
+            <Label>Name</Label>
+            <Field type="text" name="name" placeholder="Anna" />
+            <ErrorMessage
+              name="name"
+              render={message => (
+                <StyledErrorMessage>{message}</StyledErrorMessage>
+              )}
+            />
+          </InputWrapper>
+          <InputWrapper>
+            <Label>Number</Label>
+            <Field type="tel" name="number" placeholder="+380" />
+            <ErrorMessage
+              name="number"
+              render={message => (
+                <StyledErrorMessage>{message}</StyledErrorMessage>
+              )}
+            />
+          </InputWrapper>
+        </AllInputsWrapper>
 
-        <button type="submit">Add contact</button>
+        <Button type="submit">Add contact</Button>
       </Form>
     </Formik>
   );
