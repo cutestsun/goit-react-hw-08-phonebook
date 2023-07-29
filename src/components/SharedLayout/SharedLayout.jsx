@@ -29,7 +29,7 @@ export default function SharedLayout() {
         <Outlet />
       </Suspense>
       <Toaster
-        position="top-right"
+        // position="top-right"
         toastOptions={{
           duration: 4000,
           style: {

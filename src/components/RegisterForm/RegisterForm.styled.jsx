@@ -21,6 +21,7 @@ export const Title = styled.h1`
 `;
 
 export const InputWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -108,4 +109,14 @@ export const TextWrapper = styled.div`
   display: flex;
   column-gap: 12px;
   margin-top: 40px;
+`;
+
+export const StyledErrorMessage = styled.p`
+  position: absolute;
+  bottom: -24px;
+  left: 20px;
+  color: #b40101;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.22;
 `;

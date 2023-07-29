@@ -1,3 +1,4 @@
+import { contactsValidationSchema } from 'helpers/validationSchema';
 import {
   AllInputsWrapper,
   Button,
@@ -9,7 +10,6 @@ import {
 } from './ContactsForm.styled';
 import { ErrorMessage, Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { validationSchema } from 'helpers/validationSchema';
 import { addContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selectors';
 
@@ -35,7 +35,7 @@ export const ContactsForm = ({ closeModal }) => {
   return (
     <Formik
       initialValues={{ name: '', number: '' }}
-      validationSchema={validationSchema}
+      validationSchema={contactsValidationSchema}
       onSubmit={onSubmit}
     >
       <Form>

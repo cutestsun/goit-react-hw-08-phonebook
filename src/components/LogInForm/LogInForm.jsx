@@ -1,4 +1,4 @@
-import { Formik } from 'formik';
+import { ErrorMessage, Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import {
@@ -9,8 +9,10 @@ import {
   FormWrapper,
   InputWrapper,
   Label,
+  StyledErrorMessage,
   Title,
 } from './LogInForm.styled';
+import { loginValidationSchema } from 'helpers/validationSchema';
 
 export const LogInForm = () => {
   const dispatch = useDispatch();
@@ -20,6 +22,7 @@ export const LogInForm = () => {
       <Title>Log in</Title>
       <Formik
         initialValues={{ email: '', password: '' }}
+        validationSchema={loginValidationSchema}
         onSubmit={(values, actions) => {
           console.log(values);
           dispatch(logIn(values));
@@ -32,6 +35,12 @@ export const LogInForm = () => {
             <InputWrapper>
               <Label>Email</Label>
               <Field type="email" name="email" placeholder="Your email" />
+              <ErrorMessage
+                name="email"
+                render={message => (
+                  <StyledErrorMessage>{message}</StyledErrorMessage>
+                )}
+              />
             </InputWrapper>
             <InputWrapper>
               <Label>Password</Label>
@@ -39,6 +48,12 @@ export const LogInForm = () => {
                 type="password"
                 name="password"
                 placeholder="Your password"
+              />
+              <ErrorMessage
+                name="password"
+                render={message => (
+                  <StyledErrorMessage>{message}</StyledErrorMessage>
+                )}
               />
             </InputWrapper>
           </AllInputsWrapper>
