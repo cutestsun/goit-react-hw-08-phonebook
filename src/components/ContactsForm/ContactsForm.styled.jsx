@@ -39,7 +39,7 @@ export const Field = styled(FormikField)`
   font-size: 16px;
 
   &:focus {
-    outline: 1.5 solid ${colors.mainAccentColor};
+    outline: 1.5px solid ${colors.mainAccentColor};
   }
 
   &::placeholder {
