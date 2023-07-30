@@ -31,9 +31,7 @@ export const App = () => {
           <Route index element={<Home />} />
           <Route
             path="contacts"
-            element={
-              <PrivateRoute component={<Contacts />} redirectTo="/register" />
-            }
+            element={<PrivateRoute component={<Contacts />} />}
           />
           <Route
             path="register"
@@ -50,8 +48,8 @@ export const App = () => {
               <RestrictedRoute component={<Login />} redirectTo="/contacts" />
             }
           />
+          <Route path="*" element={<NotFound />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
       </Routes>
       <GlobalStyle />
     </>

@@ -1,5 +1,6 @@
 import { Container } from 'components/Styled/Container.styled';
 import { Section } from 'components/Styled/Section.styled';
+import { colors } from 'helpers/variables';
 import { Link } from 'react-router-dom';
 
 export default function NotFound() {
@@ -10,7 +11,7 @@ export default function NotFound() {
         <p>
           Please, go to main page:{' '}
           <Link to="/">
-            <b>Link</b>
+            <b style={{ color: `${colors.mainAccentColor}` }}>Link</b>
           </Link>
         </p>
       </Container>
