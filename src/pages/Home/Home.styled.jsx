@@ -106,7 +106,6 @@ export const Description = styled.p`
     width: 508px;
   }
   @media screen and (max-width: 969.98px) {
-    line-height: 1.3;
     font-size: 15px;
     width: 488px;
   }
@@ -119,20 +118,20 @@ export const Description = styled.p`
     background-color: ${colors.transparentBgColor};
     border-radius: 4px;
     font-weight: 500;
-    font-size: 13.3px;
+    font-size: 16.8px;
     width: 100%;
   }
   @media screen and (max-width: 413.98px) {
-    font-size: 3.15vw;
+    font-size: 4.05vw;
   }
-  @media screen and (max-width: 362.98px) {
-    font-size: 3.1vw;
+  @media screen and (max-width: 359.98px) {
+    font-size: 3.95vw;
   }
-  @media screen and (max-width: 329.98px) {
-    font-size: 3.05vw;
+  @media screen and (max-width: 339.98px) {
+    /* font-size: 3.85vw; */
   }
   @media screen and (max-width: 319.98px) {
-    font-size: 9.76px;
+    font-size: 12.64px;
   }
 `;
 
