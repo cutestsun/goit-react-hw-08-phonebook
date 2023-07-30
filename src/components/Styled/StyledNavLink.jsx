@@ -17,4 +17,11 @@ export const StyledNavLink = styled(NavLink)`
   &.active {
     text-shadow: 0px 6px 5px #383d1c;
   }
+
+  @media screen and (max-width: 1023.98px) {
+    font-size: 23px;
+  }
+  @media screen and (max-width: 767.98px) {
+    font-size: 21px;
+  }
 `;
