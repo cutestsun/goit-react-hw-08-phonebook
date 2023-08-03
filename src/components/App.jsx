@@ -30,11 +30,11 @@ export const App = () => {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route
-            path="contacts"
+            path="/contacts"
             element={<PrivateRoute component={<Contacts />} redirectTo="/register" />}
           />
           <Route
-            path="register"
+            path="/register"
             element={
               <RestrictedRoute
                 component={<Register />}
@@ -43,7 +43,7 @@ export const App = () => {
             }
           />
           <Route
-            path="login"
+            path="/login"
             element={
               <RestrictedRoute component={<Login />} redirectTo="/contacts" />
             }
