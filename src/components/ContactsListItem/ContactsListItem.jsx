@@ -22,8 +22,11 @@ export const ContactsListItem = ({ id, name, number }) => {
         }}
         // disabled={isLoading}
       >
-        {!isLoading && <IoTrashOutline size={20} color="currentColor" />}
-        {deletingContactId === id && isLoading && <DeleteBtnLoader size={20} />}
+        {deletingContactId === id && isLoading ? (
+          <DeleteBtnLoader size={20} />
+        ) : (
+          <IoTrashOutline size={20} color="currentColor" />
+        )}
       </Button>
     </Item>
   );
