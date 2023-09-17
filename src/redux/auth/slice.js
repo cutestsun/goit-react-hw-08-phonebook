@@ -1,5 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { logIn, logOut, refreshUser, register } from './operations';
+import {
+  logIn,
+  logOut,
+  refreshUser,
+  register,
+  updateAvatar,
+} from './operations';
 import {
   handleLogIn,
   handleLogOut,
@@ -7,13 +13,14 @@ import {
   handleRefreshUserPending,
   handleRefreshUserRejected,
   handleRegister,
+  handleUpdateAvatar,
 } from './handlers';
 
 export const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    user: { name: null, email: null },
-    token: null,
+    user: { name: '', email: '', avatar: '' },
+    token: '',
     isLoggedIn: false,
     isRefreshing: false,
   },
@@ -24,7 +31,8 @@ export const authSlice = createSlice({
       .addCase(logOut.fulfilled, handleLogOut)
       .addCase(refreshUser.pending, handleRefreshUserPending)
       .addCase(refreshUser.fulfilled, handleRefreshUser)
-      .addCase(refreshUser.rejected, handleRefreshUserRejected);
+      .addCase(refreshUser.rejected, handleRefreshUserRejected)
+      .addCase(updateAvatar.fulfilled, handleUpdateAvatar);
   },
 });
 

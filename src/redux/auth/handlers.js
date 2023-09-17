@@ -29,3 +29,7 @@ export const handleRefreshUserPending = state => {
 export const handleRefreshUserRejected = state => {
   state.isRefreshing = false;
 };
+
+export const handleUpdateAvatar = (state, action) => {
+  state.user.avatar = action.payload.avatar;
+};

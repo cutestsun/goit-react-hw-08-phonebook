@@ -12,6 +12,8 @@ const Home = lazy(() => import('pages/Home/Home'));
 const Contacts = lazy(() => import('pages/Contacts/Contacts'));
 const Login = lazy(() => import('pages/Login'));
 const Register = lazy(() => import('pages/Register'));
+const Profile = lazy(() => import('pages/Profile'));
+const UpdateAvatar = lazy(() => import('pages/UpdateAvatar'));
 const NotFound = lazy(() => import('pages/NotFound'));
 
 export const App = () => {
@@ -31,7 +33,24 @@ export const App = () => {
           <Route index element={<Home />} />
           <Route
             path="/contacts"
-            element={<PrivateRoute component={<Contacts />} redirectTo="/register" />}
+            element={
+              <PrivateRoute component={<Contacts />} redirectTo="/register" />
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <PrivateRoute component={<Profile />} redirectTo="/register" />
+            }
+          />
+          <Route
+            path="/avatar"
+            element={
+              <PrivateRoute
+                component={<UpdateAvatar />}
+                redirectTo="/register"
+              />
+            }
           />
           <Route
             path="/register"
