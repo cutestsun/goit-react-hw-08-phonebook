@@ -1,7 +1,6 @@
 # 📞 Phonebook
 
 <img width="1440" alt="phonebook" src="https://github.com/cutestsun/phonebook/assets/118314867/df30ca9f-903a-46e7-a9ca-b2dba20ad7e5">
-
 ##
 
 Phonebook is a React web application that allows you to manage your contacts. Whether you need to keep track of your personal or professional contacts, this application has you covered.
