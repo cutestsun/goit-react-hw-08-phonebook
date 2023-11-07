@@ -18,12 +18,12 @@ This project is built to help you easily store and organize your contact informa
 The following technologies were used to create this project:
 
 - HTML
-- CSS
 - JavaScript
 - React
 - Axios
 - Redux
 - React Router
+- Styled Components
 
 ## Project Launch
 
