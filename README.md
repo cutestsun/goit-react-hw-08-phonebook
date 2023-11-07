@@ -1,6 +1,6 @@
 # 📞 Phonebook
 
-![Phonebook](https://monosnap.com/file/FLR4aWoQ0lwCfTJh7sgaHtMVdAh7K3)
+![Phonebook](https://res.cloudinary.com/dhgao4rhl/image/upload/v1699380940/phonebook/Screenshot_2023-11-07_at_18.56.43_ztmxel.png)
 Phonebook is a React web application that allows you to manage your contacts. Whether you need to keep track of your personal or professional contacts, this application has you covered.
 
 ## About
