@@ -6,7 +6,7 @@ Phonebook is a React web application that allows you to manage your contacts. Wh
 
 ## About
 
-This project is built to help you easily store and organize your contact information. You can add new contacts, and search for specific contacts based on their name or phone number. Phonebook uses JWT (JSON Web Tokens) for user authentication and authorization, providing a secure way to access your contacts.
+This project is built to help you easily store and organize your contact information. You can add new contacts, and search for specific contacts based on their name. Phonebook uses JWT (JSON Web Tokens) for user authentication and authorization, providing a secure way to access your contacts.
 
 ## Features
 
