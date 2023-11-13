@@ -26,6 +26,7 @@ The following technologies were used to create this project:
 - Redux
 - React Router
 - Styled Components
+- REST API
 
 ## Project Launch
 
