@@ -33,5 +33,4 @@ The following technologies were used to create this project:
 To explore this application, simply follow the link:
 [Phonebook](https://cutestsun.github.io/phonebook/)
 
-
 Enjoy managing your contacts with Phonebook!
